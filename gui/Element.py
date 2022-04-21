@@ -1,6 +1,6 @@
 from __future__ import annotations
 from pygame import Surface, Rect, SRCALPHA
-from pygame import Event as pgEvent
+from pygame.event import Event as pgEvent
 
 class Element:
     '''An object representing a GUI element'''
