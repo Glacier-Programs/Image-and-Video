@@ -4,7 +4,7 @@ Descriptions of modes used on a canvas object
 
 from typing import Any
 
-from pygame import Event as pgEvent
+from pygame.event import Event as pgEvent
 from pygame import MOUSEBUTTONUP, MOUSEMOTION, KEYDOWN
 
 from canvas import Canvas
