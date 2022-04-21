@@ -1,0 +1,2 @@
+This file is uneeded. Just here to create the volatile folder.
+This folder is for creating and deleting non-keyed frames during video creation
