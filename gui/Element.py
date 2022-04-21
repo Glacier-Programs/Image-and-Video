@@ -1,5 +1,6 @@
 from __future__ import annotations
 from pygame import Surface, Rect, SRCALPHA
+from pygame import Event as pgEvent
 
 class Element:
     '''An object representing a GUI element'''
@@ -33,4 +34,5 @@ class Element:
     # here are some redudant meethods for inheritance
     def on_click(self, coords: tuple[int]) -> None: pass
     def on_hover(self) -> None: pass
+    def handle_events(self, ev: pgEvent) -> None: pass
     
