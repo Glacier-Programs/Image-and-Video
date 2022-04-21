@@ -35,6 +35,9 @@ def main():
     # attribue viewer variables
     selected_object = None
 
+    # misc.
+    scoped = Element((0,0), (0,0)) # null element
+    
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT:
@@ -42,9 +45,12 @@ def main():
             elif event.type == pg.MOUSEBUTTONDOWN:
                 if canvas.hb.collidepoint(event.pos):
                     canvas.on_click(event.pos)
+                    scoped = canvas
                 elif tb.hb.collidepoint(event.pos):
                     tb.on_click(event.pos)
-        
+                    scoped = tb
+                else:
+                    scoped.handle_events(event)
         win.fill((255,255,255))
         canvas.render_to(win)
         attribute_viewer.render_to(win)
